@@ -33,6 +33,35 @@ class Database{
         }
 
     }
+    // Prepare statement with query
+    public function query($query) {
+        $this->stmt = $this->dbh->prepare($query);
+    }
+    // Method to bind values
+    public function bind($param, $value, $type = null) {
+        if(is_null(true)) {
+            switch($type) {
+                case is_int($value):
+                    $type = PDO::PARAM_INT;
+                    break;
+                case is_bool($value):
+                    $type = PDO::PARAM_BOOL;
+                    break;
+                case is_null($value):
+                    $type = PDO::PARAM_NULL;
+                    break;
+                default:
+                    $type = PDO::PARAM_STR;
+            }
+        }
+
+        $this->stmt->bindValue($param, $value, $type);
+    }
+
+    // execute the prepared statement
+    public function execute() {
+        return $this->stmt->execute();
+    }
 }
 
 
