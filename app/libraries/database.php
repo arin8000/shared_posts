@@ -62,6 +62,23 @@ class Database{
     public function execute() {
         return $this->stmt->execute();
     }
+
+    // Get results set as array of objects
+    public function resultSet(){
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    // Get single records as objects
+    public function single(){
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    // Get row count
+    public function rowCount(){
+        return $this->stmt->rowCount();
+    }
 }
 
 
