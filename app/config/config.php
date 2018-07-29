@@ -1,12 +1,14 @@
 <?php
 // DB params
 define('DB_HOST' , 'localhost');
-define('DB_USER', '_YOUR_USER_');
-define('DB_PASS' , '_YOUR_PASS_');
-define('DB_NAME' , '_YOUR_DBNAME_');
+define('DB_USER', 'root');
+define('DB_PASS' , 'root');
+define('DB_NAME' , 'shareposts');
 //App root
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL root
-define('URLROOT', '_YOUR_URL_');
+define('URLROOT', 'http://localhost:8888/shareposts');
 // Site name
-define('SITENAME', '_YOUR_SITENAME_');
+define('SITENAME', 'SharePosts');
+// App version
+define('APPVERSION' , '1.0.0');
