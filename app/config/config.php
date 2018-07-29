@@ -1,12 +1,12 @@
 <?php
 // DB params
 define('DB_HOST' , 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS' , 'root');
-define('DB_NAME' , 'amvc');
+define('DB_USER', '_YOUR_USER_');
+define('DB_PASS' , '_YOUR_PASS_');
+define('DB_NAME' , '_YOUR_DBNAME_');
 //App root
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL root
-define('URLROOT', 'http://localhost:8888/arinMVC');
+define('URLROOT', '_YOUR_URL_');
 // Site name
-define('SITENAME', 'ArinMVC');
+define('SITENAME', '_YOUR_SITENAME_');
